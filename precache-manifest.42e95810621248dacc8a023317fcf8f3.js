@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "b64bb699b6bfadf888e4ff89d3bba34d",
+    "revision": "9e582bdbce2e70f74dc82aaafe8d51f1",
     "url": "/hri-game/index.html"
   },
   {
-    "revision": "74c8cfecdce281a389ae",
+    "revision": "23048ad09269452bb6fa",
     "url": "/hri-game/static/css/main.bfd17360.chunk.css"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/hri-game/static/js/2.f43c6e65.chunk.js"
   },
   {
-    "revision": "74c8cfecdce281a389ae",
-    "url": "/hri-game/static/js/main.6f60348d.chunk.js"
+    "revision": "23048ad09269452bb6fa",
+    "url": "/hri-game/static/js/main.5df3a976.chunk.js"
   },
   {
     "revision": "5dc05d134a730881d857",
@@ -24,12 +24,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/hri-game/static/media/Room0.74e7e105.PNG"
   },
   {
-    "revision": "63d65b24881bbfd268a5d396188bf63b",
-    "url": "/hri-game/static/media/Room1.63d65b24.PNG"
+    "revision": "1438e30faa2080db5ca89ce9f5bc7634",
+    "url": "/hri-game/static/media/Room1.1438e30f.PNG"
   },
   {
-    "revision": "274877ec894e4190ac31951298c45dc1",
-    "url": "/hri-game/static/media/Room10.274877ec.PNG"
+    "revision": "7cdd45f10b96ace8e976c29255a887e0",
+    "url": "/hri-game/static/media/Room10.7cdd45f1.PNG"
   },
   {
     "revision": "9b10276b9c437c5280a6a592442da6bd",
@@ -44,8 +44,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/hri-game/static/media/Room13.8682f243.PNG"
   },
   {
-    "revision": "413f9c519a3cddec86e86f3650f58180",
-    "url": "/hri-game/static/media/Room14.413f9c51.PNG"
+    "revision": "f5364699ef3ceb00c6d441c9cc2ea0da",
+    "url": "/hri-game/static/media/Room14.f5364699.PNG"
   },
   {
     "revision": "6cd41eb07f1816290ecfa56f68afe012",
@@ -84,8 +84,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/hri-game/static/media/Room5.3abbcc6f.PNG"
   },
   {
-    "revision": "62a3a72227ea2d9ba048b356980b9a76",
-    "url": "/hri-game/static/media/Room6.62a3a722.PNG"
+    "revision": "2cb1ed099581193f8cfb492d1acf55a2",
+    "url": "/hri-game/static/media/Room6.2cb1ed09.PNG"
   },
   {
     "revision": "c70e16a46ad16b53fe86972f391d0242",
