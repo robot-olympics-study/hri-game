@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "225d895d0440361d4437617c865d0de8",
+    "revision": "d71ccf2700c9f4b70969d80187df0282",
     "url": "/hri-game/index.html"
   },
   {
-    "revision": "21dcea6bc44bba7d036b",
+    "revision": "8017a52fbf9c4cea23a4",
     "url": "/hri-game/static/css/main.bfd17360.chunk.css"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/hri-game/static/js/2.f43c6e65.chunk.js"
   },
   {
-    "revision": "21dcea6bc44bba7d036b",
-    "url": "/hri-game/static/js/main.eef1de40.chunk.js"
+    "revision": "8017a52fbf9c4cea23a4",
+    "url": "/hri-game/static/js/main.38118262.chunk.js"
   },
   {
     "revision": "5dc05d134a730881d857",
