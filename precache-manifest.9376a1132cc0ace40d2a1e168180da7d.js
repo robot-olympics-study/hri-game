@@ -1,19 +1,19 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "8c8b8a38efafeb3a7ebc6df74476022b",
+    "revision": "225d895d0440361d4437617c865d0de8",
     "url": "/hri-game/index.html"
   },
   {
-    "revision": "04153c15c55f6b4ef756",
+    "revision": "21dcea6bc44bba7d036b",
     "url": "/hri-game/static/css/main.bfd17360.chunk.css"
   },
   {
-    "revision": "bac46f2fc365158b3799",
-    "url": "/hri-game/static/js/2.ec232a6c.chunk.js"
+    "revision": "1c0db29863d797af7425",
+    "url": "/hri-game/static/js/2.f43c6e65.chunk.js"
   },
   {
-    "revision": "04153c15c55f6b4ef756",
-    "url": "/hri-game/static/js/main.9d7f86ca.chunk.js"
+    "revision": "21dcea6bc44bba7d036b",
+    "url": "/hri-game/static/js/main.eef1de40.chunk.js"
   },
   {
     "revision": "5dc05d134a730881d857",
@@ -98,5 +98,13 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "413da93e21d59a11a2f17af60777eb05",
     "url": "/hri-game/static/media/Room9.413da93e.PNG"
+  },
+  {
+    "revision": "31f9643368d97bcfccbeae8636a9d616",
+    "url": "/hri-game/static/media/denise.31f96433.jpg"
+  },
+  {
+    "revision": "a48c8e2d1f63b4e49c2dc0c5080277c2",
+    "url": "/hri-game/static/media/robot_olympics.a48c8e2d.png"
   }
 ]);

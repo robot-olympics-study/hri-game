@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/hri-game/static/css/main.bfd17360.chunk.css",
-    "main.js": "/hri-game/static/js/main.9d7f86ca.chunk.js",
-    "main.js.map": "/hri-game/static/js/main.9d7f86ca.chunk.js.map",
+    "main.js": "/hri-game/static/js/main.eef1de40.chunk.js",
+    "main.js.map": "/hri-game/static/js/main.eef1de40.chunk.js.map",
     "runtime~main.js": "/hri-game/static/js/runtime~main.058b036c.js",
     "runtime~main.js.map": "/hri-game/static/js/runtime~main.058b036c.js.map",
-    "static/js/2.ec232a6c.chunk.js": "/hri-game/static/js/2.ec232a6c.chunk.js",
-    "static/js/2.ec232a6c.chunk.js.map": "/hri-game/static/js/2.ec232a6c.chunk.js.map",
+    "static/js/2.f43c6e65.chunk.js": "/hri-game/static/js/2.f43c6e65.chunk.js",
+    "static/js/2.f43c6e65.chunk.js.map": "/hri-game/static/js/2.f43c6e65.chunk.js.map",
     "index.html": "/hri-game/index.html",
-    "precache-manifest.1cb402408bb8d44bac6f170bb0a72043.js": "/hri-game/precache-manifest.1cb402408bb8d44bac6f170bb0a72043.js",
+    "precache-manifest.9376a1132cc0ace40d2a1e168180da7d.js": "/hri-game/precache-manifest.9376a1132cc0ace40d2a1e168180da7d.js",
     "service-worker.js": "/hri-game/service-worker.js",
     "static/css/main.bfd17360.chunk.css.map": "/hri-game/static/css/main.bfd17360.chunk.css.map",
     "static/media/Room0.PNG": "/hri-game/static/media/Room0.74e7e105.PNG",
@@ -30,6 +30,8 @@
     "static/media/Room6.PNG": "/hri-game/static/media/Room6.62a3a722.PNG",
     "static/media/Room7.PNG": "/hri-game/static/media/Room7.c70e16a4.PNG",
     "static/media/Room8.PNG": "/hri-game/static/media/Room8.45cf3143.PNG",
-    "static/media/Room9.PNG": "/hri-game/static/media/Room9.413da93e.PNG"
+    "static/media/Room9.PNG": "/hri-game/static/media/Room9.413da93e.PNG",
+    "static/media/denise.jpg": "/hri-game/static/media/denise.31f96433.jpg",
+    "static/media/robot_olympics.png": "/hri-game/static/media/robot_olympics.a48c8e2d.png"
   }
 }
