@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/hri-game/precache-manifest.1be12c5089832c6e2b70b40cd98fed24.js"
+  "/hri-game/precache-manifest.aeed6b9a748934fe631e7f37717a3a12.js"
 );
 
 self.addEventListener('message', (event) => {
