@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "393e5ad01472d0caa8400196e6169f38",
+    "revision": "599dc771b0270093478cc909c6eca6c0",
     "url": "/hri-game/index.html"
   },
   {
