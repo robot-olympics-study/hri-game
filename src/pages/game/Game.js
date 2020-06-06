@@ -5,7 +5,7 @@ import Button from '@material-ui/core/Button';
 import Cookies from 'universal-cookie';
 import { animateScroll as scroll } from "react-scroll";
 
-import { rewards, successes, robot_strategy, MAX_ROOMS, roomOrder, TREATMENT } from '../config.js'
+import { rewards, successes, robot_strategy, MAX_ROOMS, roomOrder, TREATMENT, STRATEGY, greedy_choice } from '../config.js'
 import Intro from './Intro.js';
 import RoomOptions from './RoomOptions.js';
 import HumanVideo from './HumanVideo.js';
@@ -98,7 +98,8 @@ class Game extends React.Component {
         Q6: this.state.Q6 || "",
         Notes: this.state.Notes || "",
         Treatment: TREATMENT,
-        SiteVersion: 2.11,
+        Strategy: STRATEGY,
+        SiteVersion: 2.12,
         Loaded: this.state.loaded,
       }),
     })
@@ -187,11 +188,21 @@ class Game extends React.Component {
     // Index into the cached mcts results to get robot action
     // const strategy = this.state.id ? this.state.id % robot_strategies.length : 0;
     // const robotAction = robot_strategies[strategy][this.state.history.join('')];
-    const robotAction = robot_strategy[this.state.history.join('')];
-    this._updateScore(robotAction, "robot");
-    this._updateHistory(robotAction);
-    this._updatePage("robotVideo");
-    this.scrollTop();
+    if(STRATEGY=="GREEDY"){
+      const row = roomOrder[this.state.stage];
+      const robotAction = greedy_choice[row];
+      this._updateScore(robotAction, "robot");
+      this._updateHistory(robotAction);
+      this._updatePage("robotVideo");
+      this.scrollTop();
+    }
+    else{
+      const robotAction = robot_strategy[this.state.history.join('')];
+      this._updateScore(robotAction, "robot");
+      this._updateHistory(robotAction);
+      this._updatePage("robotVideo");
+      this.scrollTop();
+    }
   }
 
   // Stages go from 0 to 4, 5 indicates a finished game.

@@ -82,7 +82,7 @@ class Intro extends React.Component {
           : ""}
         {this.state.screen === 0 ?
           <div>
-            Thanks for volunteering to help us test our program! This should take approximately 10-20 minutes.
+            Thanks for volunteering to help us test our program!
             <br /><br />
             Meet Denise, your teammate for today.
             <img src={require(`../../img/denise.jpg`)} width="80%" alt="Denise" />
@@ -142,9 +142,12 @@ class Intro extends React.Component {
             <br />
             <img src={require(`../../img/robot_olympics.png`)} width="80%" alt="robot_olympics" />
             <br />
-            Denise comes in a few flavors, each with its own strategy and capabilities.
+            The Olympic events require a variety of different capabilities.
             <br />
-            <strong>Denise is aware of her own capabilities.</strong>
+            <br />
+            We don’t know how many of these capabilities Denise has, or which ones.
+            <br />
+            <strong>Denise *does* know which capabilities she has.</strong>
             <br />
             We don’t know what version you’ll be working with, but we’re sure that you’re going to do great.
             </div> : ""}
@@ -158,21 +161,13 @@ class Intro extends React.Component {
           Failed attempts earn zero points.
           <br /><br />
           When you’re ready, we’ll show you the different challenges.
-          But first, let us know what your name is and whether it's your first time playing!
+          But first, let us know whether it's your first time playing!
           </p>
             <strong>
-              Please do not hit the back button in your browser. Your progress will be saved in your browser cookies if you need to leave in the middle.
+              Please do not hit the back button in your browser.
           </strong>
             <br />
-            <TextField
-              id="outlined-name"
-              label="Name"
-              defaultValue=""
-              className={classes.textField}
-              margin="normal"
-              onChange={this.props.setName('name')}
-              variant="outlined"
-            />
+            {this.props.setName('Player')}
             <br />
             <br />
             <FormControlLabel
@@ -205,4 +200,3 @@ class Intro extends React.Component {
 }
 
 export default withStyles(styles)(Intro);
-

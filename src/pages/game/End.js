@@ -82,7 +82,7 @@ class End extends React.Component {
             <div className={classes.textBox}>
               <div className={classes.textBoxHeader}>
               How did your thoughts about Denise change throughout the game?
-              </div> 
+              </div>
               <TextField
                 id="outlined-multiline-flexible"
                 label="Response"
@@ -132,22 +132,22 @@ class End extends React.Component {
                 variant="outlined"
               />
             </div>
-            <MuiSlider 
+            <MuiSlider
               question="Denise is able to understand audio instructions."
               onChange={this.props.saveSlider("A1")}/>
-            <MuiSlider 
+            <MuiSlider
               question="Denise is able to recognize colors."
               onChange={this.props.saveSlider("A2")}/>
-            <MuiSlider 
+            <MuiSlider
               question="Denise is able to recognize faces."
               onChange={this.props.saveSlider("A3")}/>
-            <MuiSlider 
+            <MuiSlider
               question="Denise is able to recognize objects."
               onChange={this.props.saveSlider("A4")}/>
-            <MuiSlider 
+            <MuiSlider
               question="Denise is able to locate the origin of a noise."
               onChange={this.props.saveSlider("A5")}/>
-            <MuiSlider 
+            <MuiSlider
               question="Denise is able to navigate in the dark."
               onChange={this.props.saveSlider("A6")}/>
             <br />
@@ -172,10 +172,12 @@ class End extends React.Component {
               Submit
             </Button>
             <br />
-          </div> : 
+          </div> :
           <div>
           <h2>Thank you for taking the time to play our game!</h2>
-          <h2> Your input is extremely valuable for us as we continue testing and development.</h2></div>}
+          <h2> Your input is extremely valuable for us as we continue testing and development.</h2>
+          <h3>Copy your unique reward code and paste it on your Amazon Mechanical Turk HIT page</h3>
+          <h3>Your Unique Code: {this.props.ID}</h3></div>}
       </div>
     );
   }

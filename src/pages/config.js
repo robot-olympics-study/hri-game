@@ -17,11 +17,13 @@ const success4 = [1, 0, 0, 1]
 const success5 = [1, 1, 0, 1]
 const successes = [success1, success2, success3, success4, success5]
 
+const greedy_choice = [1, 1, 0, 0, 0]
+
 const videos = [
   ['https://youtu.be/nhygk6tfxwY', 'https://youtu.be/U4VZreSaoD8', 'https://youtu.be/3QSoHLZi-04', 'https://youtu.be/eCYaAl4A1do'],
   ['https://youtu.be/8Y9KRuk1knY', 'https://youtu.be/DsylI17drwo', 'https://youtu.be/GKLkLg97Z-Y', 'https://youtu.be/aOqkfVtcXQM'],
-  ['https://youtu.be/IOXn8A5EI7Q', 'https://youtu.be/rm4w5o4HnGk', 'https://youtu.be/AUdG5_rmx9M', 'https://youtu.be/QkJiRCapgUc'], 
-  ['https://youtu.be/bOXhhWrgezo', 'https://youtu.be/afBC1nnR3Tg', 'https://youtu.be/5kKwR_tmu-s', 'https://youtu.be/0KMx_1-FU-s'], 
+  ['https://youtu.be/IOXn8A5EI7Q', 'https://youtu.be/rm4w5o4HnGk', 'https://youtu.be/AUdG5_rmx9M', 'https://youtu.be/QkJiRCapgUc'],
+  ['https://youtu.be/bOXhhWrgezo', 'https://youtu.be/afBC1nnR3Tg', 'https://youtu.be/5kKwR_tmu-s', 'https://youtu.be/0KMx_1-FU-s'],
   ['https://youtu.be/a5w7cL3qbxQ', 'https://youtu.be/ntOPYEcG0gY', 'https://youtu.be/8uMbwh7WgG8', 'https://youtu.be/Iu7rha1YL5M']]
 
 const rooms = {
@@ -31,12 +33,30 @@ const rooms = {
     3: 'Room D',
   }
 
-// BEGIN SET TREATMENT 
+//STRATEGY FOR THE GAME
+var STRATEGY = "MCTS"
+var strategy_probability = Math.random()
+if (strategy_probability > 0.5) {
+  STRATEGY = 'MCTS'
+}
+else{
+  STRATEGY = 'GREEDY'
+}
+
+
+// BEGIN SET TREATMENT
 var TREATMENT = 'BA'
-/* Example of random treatment. Not compatible with restarting from cookies.
-if (Math.random() > 0.5) {
+// Example of random treatment. Not compatible with restarting from cookies.
+var treatment_probability = Math.random()
+if (treatment_probability > 0.75 && treatment_probability < 1) {
   TREATMENT = 'AB'
-} */
+} else if (treatment_probability > 0.5 && treatment_probability < 0.75) {
+  TREATMENT = 'A'
+} else if (treatment_probability > 0.25 && treatment_probability < 0.5) {
+  TREATMENT = 'B'
+} else if (treatment_probability > 0 && treatment_probability < 0.25) {
+  TREATMENT = 'BA'
+}
 // END SET TREATMENT
 
 // Don't modify code below here
@@ -63,4 +83,4 @@ if (TREATMENT === 'AB') {
   MAX_ROOMS = 5;
 }
 
-export {rewards, successes, videos, rooms, robot_strategy, roomOrder, roomList, MAX_ROOMS, TREATMENT};
+export {rewards, successes, videos, rooms, robot_strategy, roomOrder, roomList, MAX_ROOMS, TREATMENT, STRATEGY, greedy_choice};
