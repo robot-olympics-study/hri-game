@@ -1,23 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "6dd76c6c80839e0f02ce5a66759a4f50",
+    "revision": "cc7319e01ff7e07c137154e2f3b3f88d",
     "url": "/hri-game/index.html"
   },
   {
-    "revision": "4b671fd8f9e61a6a4d90",
+    "revision": "1c91e2b81721f12f6257",
     "url": "/hri-game/static/css/main.830b2f83.chunk.css"
   },
   {
-    "revision": "56424d6fcb5af87ec73f",
-    "url": "/hri-game/static/js/2.e182570b.chunk.js"
+    "revision": "73f7cd25d1c7609ddb32",
+    "url": "/hri-game/static/js/2.0b48199a.chunk.js"
   },
   {
-    "revision": "4b671fd8f9e61a6a4d90",
-    "url": "/hri-game/static/js/main.58cbed22.chunk.js"
+    "revision": "b73030adcf8fd90bc896352fcc8ee2b7",
+    "url": "/hri-game/static/js/2.0b48199a.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "5dc05d134a730881d857",
-    "url": "/hri-game/static/js/runtime~main.058b036c.js"
+    "revision": "1c91e2b81721f12f6257",
+    "url": "/hri-game/static/js/main.a8191d6d.chunk.js"
+  },
+  {
+    "revision": "7a880f6d5f42bb923fbd",
+    "url": "/hri-game/static/js/runtime-main.58612f74.js"
   },
   {
     "revision": "74e7e105cec23edd99b7233407e47fac",
