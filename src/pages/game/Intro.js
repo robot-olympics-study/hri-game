@@ -124,13 +124,24 @@ class Intro extends React.Component {
               onChange={this.props.saveSlider("Q5")} />
 
             <MuiRadio
-              question="What is your knowledge of computers?"
-              choices={["(5) I know some things about how computers work beneath the surface.",
-                "(4) I’m comfortable with the things listed below, plus I have done some computer programming",
+              question="Describe your experience with working with computers by choosing the item below that describes you best."
+              choices={["(1) I know some things about how computers work beneath the surface. [Maybe you know about networking, OS-level stuff, or GUI window managers, for example.] ",
+                "(2) I’m comfortable with the things listed below, plus I have done some computer programming (this includes using programs like Matlab).",
                 "(3) I’m comfortable changing settings or installing new things myself on my computer.",
-                "(2) I’m comfortable browsing the internet or using a word processor like Microsoft Word",
-                "(1) I’m not very comfortable with any of this stuff."]}
+                "(4) I’m comfortable browsing the internet or using a word processor like Microsoft Word",
+                "(5) I’m not very comfortable with any of this stuff."]}
               onChange={this.props.saveRadio("Q6")} />
+            <MuiRadio
+              question="Describe your experience with robots by choosing the item below that describes you best."
+              choices={["(1) I have experience building or programming a robot.",
+                "(2) I have experience controlling or operating a robot.",
+                "(3) I have experience driving remote-control devices (e.g., remote-control cars/planes/helicopters, robotic toys).",
+                "(4) I have personally been around a robot before.",
+                "(5) I have seen video of a robot before.",
+                "(6) I have only seen robots on TV or in the movies",
+                "(7) I have heard the term 'robot' in conversation, but that's it.",
+                "(8) I have never seen a robot anywhere."]}
+              onChange={this.props.saveRadio("Q7")} />
           </div> : ""}
         {this.state.screen === 2 ?
           <div>

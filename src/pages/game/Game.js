@@ -96,6 +96,7 @@ class Game extends React.Component {
         Q4: this.state.Q4 || 3,
         Q5: this.state.Q5 || 3,
         Q6: this.state.Q6 || "",
+        Q7: this.state.Q7 || "",
         Notes: this.state.Notes || "",
         Treatment: TREATMENT,
         Strategy: STRATEGY,
@@ -236,6 +237,7 @@ class Game extends React.Component {
     cookies.set("Q4", this.state.Q4 || 3, { path: "/", expires: d });
     cookies.set("Q5", this.state.Q5 || 3, { path: "/", expires: d });
     cookies.set("Q6", this.state.Q6 || "", { path: "/", expires: d });
+    cookies.set("Q7", this.state.Q7 || "", { path: "/", expires: d });
     this.setState({ showHistory: false }, () => this.setState({ showHistory: true }));
   };
 
@@ -254,6 +256,7 @@ class Game extends React.Component {
     cookies.remove("Q4", { path: '/' });
     cookies.remove("Q5", { path: '/' });
     cookies.remove("Q6", { path: '/' });
+    cookies.remove("Q7", { path: '/' });
   };
 
   loadCookies = () => {
@@ -338,6 +341,7 @@ class Game extends React.Component {
           {this.state.page === "end" ?
             <End
               totalScore={this.state.score}
+              ID = {this.state.id}
               saveText={this.saveText}
               sendData={() => this._sendData("/complete")}
               saveSlider={this.saveSlider}
