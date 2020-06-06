@@ -6,6 +6,7 @@ import { withStyles } from '@material-ui/core/styles';
 import { MAX_ROOMS } from '../config.js';
 
 import MuiSlider from './inputs/MuiSlider.js'
+import MuiRadio from './inputs/MuiRadio.js';
 
 const styles = theme => ({
   card: {
@@ -61,9 +62,9 @@ class End extends React.Component {
             <br />
             <div className={classes.textBox}>
               <div className={classes.textBoxHeader}>
-              What do you think of Denise as a teammate? (honest opinions here - we won't tell Denise!)
+              Describe how you think Denise chose rooms. Was there a particular strategy or pattern?
               <br/>
-              Would you have preferred to work with a different version of Denise?
+              Did she make mistakes? Was she clever, foolish, or mindless?
               </div>
               <TextField
                 id="outlined-multiline-flexible"
@@ -81,7 +82,9 @@ class End extends React.Component {
             <br />
             <div className={classes.textBox}>
               <div className={classes.textBoxHeader}>
-              How did your thoughts about Denise change throughout the game?
+              Tell us about any times where you felt confused or unsure about the game rules, or how the game works.
+              <br/>
+              Tell us what you decided to do, and how your uncertainty might have impacted your thinking.
               </div>
               <TextField
                 id="outlined-multiline-flexible"
@@ -97,60 +100,76 @@ class End extends React.Component {
               />
             </div>
             <br />
-            <div className={classes.textBox}>
-              <div className={classes.textBoxHeader}>
-              Do you feel that Denise chose rooms with a consistent strategy throughout the game?
-              </div>
-              <TextField
-                id="outlined-multiline-flexible"
-                label="Response"
-                multiline
-                fullWidth
-                rows="6"
-                rowsMax="20"
-                onChange={this.props.saveText("D3")}
-                className={classes.textField}
-                margin="normal"
-                variant="outlined"
-              />
-            </div>
-            <br />
-            <div className={classes.textBox}>
-              <div className={classes.textBoxHeader}>
-              Do you feel that you and Denise would score more points if you tried again?
-              </div>
-              <TextField
-                id="outlined-multiline-flexible"
-                label="Response"
-                multiline
-                fullWidth
-                rows="6"
-                rowsMax="20"
-                onChange={this.props.saveText("D4")}
-                className={classes.textField}
-                margin="normal"
-                variant="outlined"
-              />
-            </div>
+
             <MuiSlider
-              question="Denise is able to understand audio instructions."
+              question="[Rate your level of certainty] Denise is able to understand simple audio commands in spoken English."
+              marks={7}
               onChange={this.props.saveSlider("A1")}/>
             <MuiSlider
-              question="Denise is able to recognize colors."
+              question="[Rate your level of certainty] Denise is able to identify and follow a particular color."
+              marks={7}
               onChange={this.props.saveSlider("A2")}/>
             <MuiSlider
-              question="Denise is able to recognize faces."
+              question="[Rate your level of certainty] Denise is able to detect faces."
+              marks={7}
               onChange={this.props.saveSlider("A3")}/>
             <MuiSlider
-              question="Denise is able to recognize objects."
+              question="[Rate your level of certainty] Denise is able to identify a particular object from several options."
+              marks={7}
               onChange={this.props.saveSlider("A4")}/>
             <MuiSlider
-              question="Denise is able to locate the origin of a noise."
+              question="[Rate your level of certainty] Denise is able to locate and drive towards the origin of a noise."
+              marks={7}
               onChange={this.props.saveSlider("A5")}/>
             <MuiSlider
-              question="Denise is able to navigate in the dark."
+              question="[Rate your level of certainty] Denise is able to navigate without hitting a wall even when her eyes are covered."
+              marks={7}
               onChange={this.props.saveSlider("A6")}/>
             <br />
+            <MuiRadio
+              question="Before choosing an event, I studied the four options until I understood them as best as I could"
+              choices={["Never",
+                "Sometimes but not always",
+                "Every time"]}
+              onChange={this.props.saveRadio("E1")} />
+            <MuiRadio
+              question="After I was done looking at the event options, I thought carefully about which of them to choose."
+              choices={["Strongly disagree",
+                "Disagree",
+                "Slightly disagree",
+                "Neutral",
+                "Slightly agree",
+                "Agree",
+                "Strongly agree"]}
+              onChange={this.props.saveRadio("E2")} />
+            <MuiRadio
+              question="How many times did you ignore the reward points when choosing an event? For example, choosing an event just to see if Denise could do it."
+              choices={["Never",
+                "Sometimes but not always",
+                "Every time"]}
+              onChange={this.props.saveRadio("E3")} />
+          <MuiRadio
+            question="On average, how risky vs. safe were you when choosing an event? I.e., how much did you *gamble* to try to win more points when you weren’t sure about Denise’s abilities?"
+            choices={["Safest - when possible",
+              "only chose events that I *knew* Denise could complete",
+              "Safer",
+              "Balanced",
+              "Riskier",
+              "Riskiest - always chose the highest possible points if there was any chance that Denise would succeed"]}
+            onChange={this.props.saveRadio("E4")} />
+            <MuiRadio
+              question="Did you ever look at the history of past choices made by you and Denise?"
+              choices={["No",
+                "Yes -- once or twice",
+                "Yes -- more than twice"]}
+              onChange={this.props.saveRadio("E5")} />
+            <MuiRadio
+              question="Did forgetfulness hurt your score? I.e., do you think you would have been able to make better choices if you had studied the history, or been able to watch some of the videos again?"
+              choices={["Never",
+                "Sometimes but not always",
+                "Every time"]}
+              onChange={this.props.saveRadio("E6")} />
+
             <div className={classes.textBox}>
               <div className={classes.textBoxHeader}>
               Did you find the game particularly engaging or tedious? What would have made the game more enjoyable?

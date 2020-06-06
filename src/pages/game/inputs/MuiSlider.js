@@ -74,6 +74,68 @@ const marks5 = [
   },
 ];
 
+const marks7 = [
+  {
+    value: 1,
+    label: 'Definitely cannot',
+  },
+  {
+    value: 2,
+    label: 'Probably cannot',
+  },
+  {
+    value: 3,
+    label: 'Maybe cannot',
+  },
+  {
+    value: 4,
+    label: 'Unsure',
+  },
+  {
+    value: 5,
+    label: 'Maybe can',
+  },
+  {
+    value: 6,
+    label: 'Probably can',
+  },
+  {
+    value: 7,
+    label: 'Definitely can',
+  },
+];
+
+const marks8 = [
+  {
+    value: 1,
+    label: 'Strongly disagree',
+  },
+  {
+    value: 2,
+    label: 'Disagree',
+  },
+  {
+    value: 3,
+    label: 'Slightly disagree',
+  },
+  {
+    value: 4,
+    label: 'Neutral',
+  },
+  {
+    value: 5,
+    label: 'Slightly agree',
+  },
+  {
+    value: 6,
+    label: 'Agree',
+  },
+  {
+    value: 7,
+    label: 'Strongly agree',
+  },
+];
+
 function valuetext(value) {
   return `${value}`;
 }
@@ -86,9 +148,44 @@ function valueLabelFormat5(value) {
   return marks5.findIndex(mark => mark.value === value) + 1;
 }
 
+function valueLabelFormat7(value) {
+  return marks7.findIndex(mark => mark.value === value) + 1;
+}
+
 export default function MuiSlider(props) {
   const classes = useStyles();
-
+  if(props.marks === 7){
+    return (
+      <div>
+        <br/>
+        <Grid
+          container
+          spacing={0}
+          direction="column"
+          alignItems="center"
+          justify="center"
+        >
+          <Box width="75%">
+            <Typography id="discrete-slider-restrict" gutterBottom className={classes.body}>
+              {props.question}
+            </Typography>
+            <Slider
+              defaultValue={props.marks === 7 ? 4: 3}
+              valueLabelFormat={props.marks === 7 ? valueLabelFormat7 : valueLabelFormat}
+              getAriaValueText={valuetext}
+              aria-labelledby="discrete-slider-restrict"
+              step={1}
+              min={1}
+              max={props.marks === 7 ? 7 : 5}
+              valueLabelDisplay="auto"
+              marks={props.marks === 7 ? marks7 : marks}
+              onChange={props.onChange}
+            />
+          </Box>
+        </Grid>
+      </div>
+    );
+  }
   return (
     <div>
       <br/>
@@ -104,7 +201,7 @@ export default function MuiSlider(props) {
             {props.question}
           </Typography>
           <Slider
-            defaultValue={props.marks === 5 ? 3: 4}
+            defaultValue={props.marks+1/2}
             valueLabelFormat={props.marks === 5 ? valueLabelFormat5 : valueLabelFormat}
             getAriaValueText={valuetext}
             aria-labelledby="discrete-slider-restrict"
@@ -119,4 +216,6 @@ export default function MuiSlider(props) {
       </Grid>
     </div>
   );
+
+
 }
