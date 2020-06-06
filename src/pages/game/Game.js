@@ -350,6 +350,7 @@ class Game extends React.Component {
               ID = {this.state.id}
               saveText={this.saveText}
               sendData={() => this._sendData("/complete")}
+              saveRadio={this.saveText}
               saveSlider={this.saveSlider}
               clearCookies={this.clearCookies} /> : ""}
         </Paper>
