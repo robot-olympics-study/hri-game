@@ -201,16 +201,16 @@ export default function MuiSlider(props) {
             {props.question}
           </Typography>
           <Slider
-            defaultValue={props.marks+1/2}
-            valueLabelFormat={props.marks === 5 ? valueLabelFormat5 : valueLabelFormat}
-            getAriaValueText={valuetext}
-            aria-labelledby="discrete-slider-restrict"
-            step={1}
-            min={1}
-            max={props.marks === 5 ? 5 : 7}
-            valueLabelDisplay="auto"
-            marks={props.marks === 5 ? marks5 : marks}
-            onChange={props.onChange}
+          defaultValue={props.marks === 5 ? 3: 4}
+          valueLabelFormat={props.marks === 5 ? valueLabelFormat5 : valueLabelFormat}
+          getAriaValueText={valuetext}
+          aria-labelledby="discrete-slider-restrict"
+          step={1}
+          min={1}
+          max={props.marks === 5 ? 5 : 7}
+          valueLabelDisplay="auto"
+          marks={props.marks === 5 ? marks5 : marks}
+          onChange={props.onChange}
           />
         </Box>
       </Grid>

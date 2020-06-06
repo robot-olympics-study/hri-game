@@ -106,7 +106,7 @@ class Game extends React.Component {
         Notes: this.state.Notes || "",
         Treatment: TREATMENT,
         Strategy: STRATEGY,
-        SiteVersion: 2.12,
+        SiteVersion: 2.13,
         Loaded: this.state.loaded,
       }),
     })
