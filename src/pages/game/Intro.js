@@ -189,7 +189,7 @@ class Intro extends React.Component {
         </Button> : ""}
         <Button variant="contained" color="primary" className={classes.button}
           onClick={this.nextScreen}
-          disabled={(this.props.name.length <= 2 && this.state.screen === 3) || (
+          disabled={(
             this.state.screen === 1 && !this.props.demographicsDone()
           )} >
           {this.state.screen === -1 ? "Start Over" : "Continue"}
