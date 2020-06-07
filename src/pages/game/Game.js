@@ -169,10 +169,12 @@ class Game extends React.Component {
   }
 
   endSurveyDone = () => {
-    var done1 = this.state.E1 != "" && this.state.E2 != "" && this.state.E3 != "" && this.state.E4 != "" && this.state.E5 != "" && this.state.E6 != "";
+    var done1 = this.state.E1 !== "" && this.state.E2 !== "" && this.state.E3 !== "" && this.state.E4 !== "" && this.state.E5 !== "" && this.state.E6 !== "";
+    var done2 = this.state.E1 !== null && this.state.E2 !== null && this.state.E3 !== null && this.state.E4 !== null && this.state.E5 !== null && this.state.E6 !== null;
     var skillsDone = this.state.A1 != null && this.state.A2 != null && this.state.A3 != null && this.state.A4 != null && this.state.A5 != null && this.state.A6 != null;
-    var questionsDone = this.state.D1 != "" && this.state.D2 != "";
-    return done1 && questionsDone;
+    var questionsDone1 = this.state.D1 !== "" && this.state.D2 !== "";
+    var questionsDone2 = this.state.D1 !== null && this.state.D2 !== null;
+    return done1 && questionsDone1 && done2 && questionsDone2;
   }
 
 
