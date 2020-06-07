@@ -168,6 +168,11 @@ class Game extends React.Component {
     return this.state.Q1 != null && this.state.Q2 != null;
   }
 
+  endSurveyDone = () => {
+    return this.state.Q1 != null && this.state.Q2 != null;
+  }
+
+
   validData = () => {
     this.setState(state => {
       const validData = !state.valid

@@ -160,7 +160,6 @@ class Intro extends React.Component {
             <br />
             <strong>Denise *does* know which capabilities she has.</strong>
             <br />
-            We don’t know what version you’ll be working with, but we’re sure that you’re going to do great.
             </div> : ""}
         {this.state.screen === 3 ?
           <div>

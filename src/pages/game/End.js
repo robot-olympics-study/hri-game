@@ -150,8 +150,7 @@ class End extends React.Component {
               onChange={this.props.saveRadio("E3")} />
           <MuiRadio
             question="On average, how risky vs. safe were you when choosing an event? I.e., how much did you *gamble* to try to win more points when you weren’t sure about Denise’s abilities?"
-            choices={["Safest - when possible",
-              "only chose events that I *knew* Denise could complete",
+            choices={["Safest - when possible, only chose events that I *knew* Denise could complete",
               "Safer",
               "Balanced",
               "Riskier",
