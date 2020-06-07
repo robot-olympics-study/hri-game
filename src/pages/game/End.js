@@ -186,7 +186,17 @@ class End extends React.Component {
                 variant="outlined"
               />
             </div>
-            <Button variant="contained" color="primary" className={classes.button} onClick={this.submit}>
+            <br />
+            Please answer <strong>all</strong> the questions to finish.
+            <br />
+            <Button variant="contained"
+            color="primary"
+            className={classes.button}
+            onClick={this.submit}
+            disabled={(
+              !this.props.endSurveyDone()
+            )}
+            >
               Submit
             </Button>
             <br />
