@@ -172,7 +172,7 @@ class Game extends React.Component {
     var done1 = this.state.E1 != "" && this.state.E2 != "" && this.state.E3 != "" && this.state.E4 != "" && this.state.E5 != "" && this.state.E6 != "";
     var skillsDone = this.state.A1 != null && this.state.A2 != null && this.state.A3 != null && this.state.A4 != null && this.state.A5 != null && this.state.A6 != null;
     var questionsDone = this.state.D1 != "" && this.state.D2 != "";
-    return done1 && skillsDone && questionsDone;
+    return done1 && questionsDone;
   }
 
 
