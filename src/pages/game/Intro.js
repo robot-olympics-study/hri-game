@@ -125,7 +125,7 @@ class Intro extends React.Component {
 
             <MuiRadio
               question="Describe your experience with working with computers by choosing the item below that describes you best."
-              choices={["(1) I know some things about how computers work beneath the surface. [Maybe you know about networking, OS-level stuff, or GUI window managers, for example.] ",
+              choices={["(1) I know some things about how computers work beneath the surface. (Maybe you know about networking, OS-level stuff, or GUI window managers, for example.) ",
                 "(2) I’m comfortable with the things listed below, plus I have done some computer programming (this includes using programs like Matlab).",
                 "(3) I’m comfortable changing settings or installing new things myself on my computer.",
                 "(4) I’m comfortable browsing the internet or using a word processor like Microsoft Word",
