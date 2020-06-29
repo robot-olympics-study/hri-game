@@ -101,39 +101,13 @@ class RobotVideo extends React.Component {
             <Button variant="contained" color="primary" className={classes.button} onClick={() => this.player.seekTo(0, "seconds")}>
               Replay
         </Button>
-          </div> : ""}
 
-        {this.state.playtime > 0 && !this.state.videoDone ? "Finish watching the video to proceed." : ""}
-
-        {this.state.videoDone ?
-          <div className={classes.textBox}>
-            <div className={classes.textBoxHeader}>
-              Do you think {rooms[this.props.action]} was a good or bad choice for Denise to attempt?
-            <br />
-              What do you think Denise's strategy is? Do you trust her?
-          </div>
-            <TextField
-              id="outlined-multiline-flexible"
-              label="Response"
-              multiline
-              fullWidth
-              rows="6"
-              rowsMax="20"
-              onChange={this.props.saveText('R' + this.row)}
-              className={classes.textField}
-              margin="normal"
-              variant="outlined"
-            />
-          </div> : ""}
-        {this.state.videoDone ?
-          <div>
-            Click the button to submit your response and continue to the next round.
-            <br />
             <Button variant="contained" color="primary" className={classes.button} onClick={this.props.nextPage}>
-              Submit &amp; Continue
+              Continue
             </Button>
           </div> : ""}
 
+          {this.state.playtime > 0 && !this.state.videoDone ? "Finish watching the video to proceed." : ""}
 
       </div>
 

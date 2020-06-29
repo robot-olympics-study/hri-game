@@ -1,10 +1,9 @@
 import React from 'react';
 import Button from '@material-ui/core/Button';
 import Divider from '@material-ui/core/Divider';
-import TextField from '@material-ui/core/TextField';
 import { withStyles } from '@material-ui/core/styles';
 import YouTubePlayer from 'react-player/lib/players/YouTube'
-import { rewards, rooms, successes, videos, roomOrder } from '../config.js';
+import { introVideoUrl, DEBUG_MODE } from '../config.js';
 
 const styles = theme => ({
   card: {
@@ -31,7 +30,7 @@ const styles = theme => ({
   }
 });
 
-class HumanVideo extends React.Component {
+class IntroVideo extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -39,11 +38,9 @@ class HumanVideo extends React.Component {
       playtime: 0,
       videoDone: false,
     }
-    this.row = roomOrder[this.props.stage];
   }
 
   playVideo = () => {
-    this.props.scrollTop();
     this.setState({
       playing: true,
     });
@@ -51,7 +48,7 @@ class HumanVideo extends React.Component {
 
   updateState = (req, data) => {
     this.setState({[req]: data.played}, () => {
-        const vid = this.state.playtime > 0.99 || this.state.videoDone || !this.props.valid
+        const vid = this.state.playtime > 0.99 || this.state.videoDone || DEBUG_MODE
         this.setState({ videoDone: vid })
     });
   }
@@ -60,22 +57,21 @@ class HumanVideo extends React.Component {
     const { classes } = this.props;
 
     return (
-      <div className="humanVideo">
-        <h1> Your choice</h1>
+      <div className="introVideo">
+        <h1> Instructions </h1>
         <Divider />
         <br />
-        Denise received your decision to attempt {rooms[this.props.action]} worth {rewards[this.row][this.props.action]} points.
+        Please start by watching this instructional video. You must watch the entire video to proceed!
         <br />
         <br />
-
         {this.state.playing ?
           <div className="player-wrapper">
             <center>
               <YouTubePlayer
                 className='react-player'
-                url={videos[this.row] ? videos[this.row][this.props.action] : ""}
+                url={introVideoUrl}
                 playing={this.state.playing}
-                controls={!this.props.valid}
+                controls={DEBUG_MODE}
                 onProgress={(time) => this.updateState("playtime", time)}
                 ref={player => {
                   this.player = player;
@@ -88,16 +84,12 @@ class HumanVideo extends React.Component {
             Play Video
           </Button> : ""}
         <br />
-        {this.state.videoDone && successes[this.row][this.props.action] > 0 ?
-          `Congrats! You have won ${this.props.roundScore} point(s). Click continue to see which room Denise will choose!` : ""}
-        {this.state.videoDone && successes[this.row][this.props.action] === 0 ?
-          `Unfortunately, Denise failed this challenge, so the team earned 0 points. Now, Denise will choose a room to attempt!` : ""}
         {this.state.videoDone ?
           <div className="buttons">
             <Button variant="contained" color="primary" className={classes.button} onClick={() => this.player.seekTo(0, "seconds")}>
               Replay
             </Button>
-            <Button variant="contained" color="primary" className={classes.button} onClick={this.props.nextPage}>
+            <Button variant="contained" color="primary" className={classes.button} onClick={this.props.nextScreen}>
               Continue
             </Button>
           </div> : ""}
@@ -109,4 +101,4 @@ class HumanVideo extends React.Component {
   }
 }
 
-export default withStyles(styles)(HumanVideo);
+export default withStyles(styles)(IntroVideo);

@@ -5,7 +5,7 @@ import Button from '@material-ui/core/Button';
 import Cookies from 'universal-cookie';
 import { animateScroll as scroll } from "react-scroll";
 
-import { rewards, successes, robot_strategy, MAX_ROOMS, roomOrder, TREATMENT, STRATEGY, greedy_choice } from '../config.js'
+import { rewards, successes, robot_strategy, MAX_ROOMS, roomOrder, TREATMENT, STRATEGY, greedy_choice, DEBUG_MODE, SITE_VERSION } from '../config.js'
 import Intro from './Intro.js';
 import RoomOptions from './RoomOptions.js';
 import HumanVideo from './HumanVideo.js';
@@ -39,7 +39,7 @@ class Game extends React.Component {
     super(props);
     this.state = {
       name: '',
-      valid: true,
+      valid: !DEBUG_MODE,
       history: [],
       stage: 0,
       score: 0,
@@ -106,7 +106,7 @@ class Game extends React.Component {
         Notes: this.state.Notes || "",
         Treatment: TREATMENT,
         Strategy: STRATEGY,
-        SiteVersion: 2.13,
+        SiteVersion: SITE_VERSION,
         Loaded: this.state.loaded,
       }),
     })

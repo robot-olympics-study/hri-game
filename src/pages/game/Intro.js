@@ -6,9 +6,11 @@ import TextField from '@material-ui/core/TextField';
 import Checkbox from '@material-ui/core/Checkbox';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 
+import IntroVideo from './IntroVideo.js';
 import MuiSlider from './inputs/MuiSlider.js';
 import MuiDropdown from './inputs/MuiDropdown.js';
 import MuiRadio from './inputs/MuiRadio.js';
+import { DEBUG_MODE } from '../config.js';
 
 
 const styles = theme => ({
@@ -51,7 +53,7 @@ class Intro extends React.Component {
     if (this.state.screen === -1) {
       this.props.clearCookies();
     }
-    if (this.state.screen === 3) {
+    if (this.state.screen === 4) {
       this.props.nextPage();
     }
     this.setState((state) => { return { screen: state.screen + 1 } });
@@ -144,6 +146,8 @@ class Intro extends React.Component {
               onChange={this.props.saveRadio("Q7")} />
           </div> : ""}
         {this.state.screen === 2 ?
+        <IntroVideo nextScreen={this.nextScreen} valid={!DEBUG_MODE}/> : ""}
+        {this.state.screen === 3 ?
           <div>
             You and Denise will be representing the Interaction Lab in the Robot Olympics.
             <br />
@@ -161,7 +165,7 @@ class Intro extends React.Component {
             <strong>Denise *does* know which capabilities she has.</strong>
             <br />
             </div> : ""}
-        {this.state.screen === 3 ?
+        {this.state.screen === 4 ?
           <div>
             <p>
               The Olympics work in two stages.

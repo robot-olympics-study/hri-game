@@ -3,6 +3,9 @@ import { robot_actionsA } from './robot_actionsA.js';
 import { robot_actionsB } from './robot_actionsB.js';
 import { robot_actionsBA } from './robot_actionsBA.js';
 
+const DEBUG_MODE = false;
+const SITE_VERSION = 2.14;
+
 const rewards1 = [1.0, 3.0, 2.5, 2.0]
 const rewards2 = [8.0, 10.0, 7.5, 6.0]
 const rewards3 = [10.0, 10.0, 25.0, 7.0]
@@ -43,6 +46,7 @@ else{
   STRATEGY = 'GREEDY'
 }
 
+const introVideoUrl = "https://www.youtube.com/watch?v=mkJ5-4U1VyU"
 
 // BEGIN SET TREATMENT
 var TREATMENT = 'BA'
@@ -83,4 +87,4 @@ if (TREATMENT === 'AB') {
   MAX_ROOMS = 5;
 }
 
-export {rewards, successes, videos, rooms, robot_strategy, roomOrder, roomList, MAX_ROOMS, TREATMENT, STRATEGY, greedy_choice};
+export {rewards, successes, videos, introVideoUrl, rooms, robot_strategy, roomOrder, roomList, MAX_ROOMS, TREATMENT, STRATEGY, greedy_choice, DEBUG_MODE, SITE_VERSION};
