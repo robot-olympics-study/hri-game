@@ -201,13 +201,13 @@ class Intro extends React.Component {
             onClick={this.props.loadCookies}>
             Continue
         </Button> : ""}
+        {this.state.screen !== 2 ?
         <Button variant="contained" color="primary" className={classes.button}
           onClick={this.nextScreen}
-          disabled={(
-            this.state.screen === 1 && !this.props.demographicsDone()
+          disabled={(this.state.screen === 1 && !this.props.demographicsDone()
           )} >
           {this.state.screen === -1 ? "Start Over" : "Continue"}
-        </Button>
+        </Button> : ""}
       </div>
     )
   }
